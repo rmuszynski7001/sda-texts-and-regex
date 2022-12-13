@@ -7,14 +7,17 @@ public class RegexTester {
 
     private Pattern pattern;
 
-    public RegexTester(String patternAsString){
+    public RegexTester(String patternAsString) {
         this.pattern = Pattern.compile(patternAsString);
     }
 
-    public void validate(String text){
+    public void validate(String text) {
         Matcher matcher = pattern.matcher(text);
-        if (matcher.matches()){
+        if (matcher.matches()) {
             System.out.println("Prawda dla tekstu: " + text);
+        } else {
+            System.out.println("Fałsz dla tekstu: " + text);
         }
     }
+
 }
